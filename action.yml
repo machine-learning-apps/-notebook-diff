@@ -1,0 +1,10 @@
+# Login action is moved to azure/login repository, update your workflows to use the new action.
+name: 'Notebook Diff'
+author: 'awmatheson'
+description: 'Generates a notebook diff that will be saved as an artifact'
+branding:
+  icon: 'book-open'
+  color: 'gray-dark'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

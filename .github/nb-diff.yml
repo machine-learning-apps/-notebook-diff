@@ -1,0 +1,19 @@
+name: Notebook Diff
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+
+    - name: notebook-diff
+      run: | 
+        pip install -r requirements.txt
+        nbdiff nb1.ipynb nb2.ipynb
+        
