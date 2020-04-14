@@ -15,5 +15,4 @@ jobs:
     - name: notebook-diff
       run: | 
         pip install -r requirements.txt
-        nbdiff nb1.ipynb nb2.ipynb
         
