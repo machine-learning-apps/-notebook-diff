@@ -10,5 +10,6 @@ do
     if $output
     then
         nbdiff master $f --output `$f.diff`
+    fi
     nbdiff master $f -s -o -m -a
 done
